@@ -1,0 +1,35 @@
+{
+  "analysis_date": "2026-06-20 22:18:49",
+  "data_source": "akshare (Sina Finance US Stock Index)",
+  "data_range": {
+    "history": "1990-01-01 ~ 2005-12-31",
+    "recent": "2018-01-01 ~ 2025-06-30"
+  },
+  "methodology": {
+    "normalization": "Start=100 percentage change",
+    "weekly_conversion": "Last trading day of each week",
+    "dtw": "Dynamic Time Warping with Sakoe-Chiba band",
+    "similarity": "Composite = 0.45*Pearson + 0.35*DTW_sim + 0.20*pct_change_corr",
+    "sliding_window": "Step = 4 weeks"
+  },
+  "nasdaq": {
+    "top_window": {
+      "start": "1990-02-02",
+      "end": "1999-07-30",
+      "composite": 0.5485827357242368,
+      "pearson": 0.8449600464421201,
+      "dtw_distance": 21139
+    },
+    "windows_tested": 85
+  },
+  "sp500": {
+    "top_window": {
+      "start": "1990-03-30",
+      "end": "1997-09-26",
+      "composite": 0.6847244255958214,
+      "pearson": 0.9084100040197445,
+      "dtw_distance": 2418
+    },
+    "windows_tested": 111
+  }
+}
